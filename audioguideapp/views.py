@@ -414,14 +414,14 @@ def fetchlogin(request):
         else:
             messages.error(request,'User Not Found, Please Enter Right Email and Password!')
 
-    return render(request,'login.html')
+    return render(request,'Login.html')
 
 def logout(request):
     try:
         del request.session['logname']
     except:
         pass
-    return render(request, 'login.html')
+    return render(request, 'Login.html')
 
 def forgot(request):
     return render(request,'reset_password.html')
